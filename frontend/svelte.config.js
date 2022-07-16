@@ -1,5 +1,5 @@
-import adapter from 'svelte-adapter-static-digitalocean';
-import preprocess from 'svelte-preprocess';
+import adapter from 'svelte-adapter-static-digitalocean'
+import preprocess from 'svelte-preprocess'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -18,6 +18,6 @@ const config = {
 			name: ''
 		})
 	}
-};
+}
 
-export default config;
+export default config

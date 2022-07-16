@@ -1,6 +1,6 @@
 node_modules
 build
-.svelte-kit
+dist
 .env
 
 # Ignore files for YARN
