@@ -2,7 +2,7 @@
 	import { afterNavigate } from '$app/navigation'
 
 	// Stores
-	import { isDark } from '@stores/ui'
+	import useUIStore from '@stores/ui'
 
 	// Icons
 	import IconAlignRight from '~icons/line-md/align-right'
@@ -10,6 +10,8 @@
 
 	// Components
 	import NavCTA from '@components/header/NavCTA.svelte'
+
+	const { isDark } = useUIStore()
 
 	$: menuOpen = false
 	const menuClosedClasses = 'hidden sm:flex'
@@ -36,11 +38,11 @@
 		<a sveltekit:prefetch href="/" aria-label="Go to home">Home</a>
 		<a sveltekit:prefetch href="/blog/" aria-label="Go to blog">About</a>
 
-		<span class="hamburger-menu-logo mx-2 inline-flex animate-pulse mt-10 sm:hidden">
+		<span class="mobile-menu-logo mx-2 inline-flex animate-pulse mt-10 sm:hidden">
 			{#if $isDark}
-				<img class="inline max-h-3" src="/logo-light.svg" alt="Footer Logo" />
+				<img class="inline max-h-3" src="/logo-light.svg" alt="Mobile Menu Logo" />
 			{:else}
-				<img class="inline max-h-3" src="/logo-dark.svg" alt="Footer Logo" />
+				<img class="inline max-h-3" src="/logo-dark.svg" alt="Mobile Menu Logo" />
 			{/if}
 		</span>
 	</nav>

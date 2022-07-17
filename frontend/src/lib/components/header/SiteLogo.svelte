@@ -2,9 +2,9 @@
 	import { fade } from 'svelte/transition'
 
 	// Stores
-	import { isDark } from '@stores/ui'
+	import useUIStore from '@stores/ui'
 
-	// Assets
+	const { isDark } = useUIStore()
 </script>
 
 <div class="logo-container min-h-[36px]">

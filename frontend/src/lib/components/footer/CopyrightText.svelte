@@ -1,7 +1,8 @@
 <script lang="ts">
 	// Stores
-	import { isDark } from '@stores/ui'
+	import useUIStore from '@stores/ui'
 
+	const { isDark } = useUIStore()
 	const year = new Date().getFullYear()
 </script>
 
