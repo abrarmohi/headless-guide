@@ -14,6 +14,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@iconify-json/line-md": "^1.1.13",
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
@@ -35,6 +36,7 @@
 		"tailwindcss": "^3.1.6",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.4",
+		"unplugin-icons": "^0.14.7",
 		"vite": "^3.0.0"
 	},
 	"type": "module",

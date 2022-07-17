@@ -18,7 +18,8 @@ const config = {
 			precompress: false,
 			spec: '.do/spec.yaml',
 			name: ''
-		})
+		}),
+		trailingSlash: 'always'
 	}
 }
 

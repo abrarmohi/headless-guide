@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+ * Global Styles
+ */
+
+/* Link Hover Effect */
+a:not(.no-hover-effect):after {
+	display: block;
+	content: '';
+	border-bottom: solid 3px #f7aa0c;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+	transform-origin: 0% 50%;
+}
+a:not(.no-hover-effect):hover::after {
+	transform: scaleX(1);
+}

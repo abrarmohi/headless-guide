@@ -2,11 +2,27 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<!-- Favicons -->
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
+		<link rel="icon" href="%sveltekit.assets%/icon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Theme Initialization -->
+		<script type="text/javascript">
+			if (
+				localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
 		%sveltekit.head%
 	</head>
-	<body>
+	<body
+		class="p-5 flex flex-col gap-12 transition min-h-screen dark:bg-cinder dark:text-white sm:max-w-screen-xl m-auto"
+	>
 		%sveltekit.body%
 	</body>
 </html>
