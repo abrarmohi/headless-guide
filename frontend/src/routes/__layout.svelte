@@ -8,6 +8,7 @@
 	import NavBar from '@components/header/NavBar.svelte'
 	import CopyrightText from '@components/footer/CopyrightText.svelte'
 	import FooterNav from '@components/footer/FooterNav.svelte'
+	import BackToTop from '@/lib/components/shared/BackToTop.svelte'
 </script>
 
 <header class="header flex gap-8 justify-between py-5 border-b dark:border-0">
@@ -28,4 +29,6 @@
 	<CopyrightText />
 
 	<FooterNav />
+
+	<BackToTop />
 </footer>
