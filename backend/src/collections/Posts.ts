@@ -1,9 +1,14 @@
+// Types
 import { CollectionConfig } from 'payload/types'
+import { Collection } from '../types'
+
+// Hooks
+import { validateURL } from '../hooks/posts'
 
 const Posts: CollectionConfig = {
 	slug: 'posts',
 	admin: {
-		defaultColumns: ['title', 'author', 'category', 'tags', 'status'],
+		defaultColumns: ['title', 'category', 'status'],
 		useAsTitle: 'title'
 	},
 	access: {
@@ -12,12 +17,22 @@ const Posts: CollectionConfig = {
 	fields: [
 		{
 			name: 'title',
-			type: 'text'
+			type: 'text',
+			required: true
+		},
+		{
+			name: 'url',
+			type: 'text',
+			required: true,
+			unique: true,
+			hooks: {
+				beforeValidate: [validateURL]
+			}
 		},
 		{
 			name: 'author',
 			type: 'relationship',
-			relationTo: 'users'
+			relationTo: Collection.USERS
 		},
 		{
 			name: 'publishedDate',
@@ -26,13 +41,7 @@ const Posts: CollectionConfig = {
 		{
 			name: 'category',
 			type: 'relationship',
-			relationTo: 'categories'
-		},
-		{
-			name: 'tags',
-			type: 'relationship',
-			relationTo: 'tags',
-			hasMany: true
+			relationTo: Collection.CATEGORIES
 		},
 		{
 			name: 'content',

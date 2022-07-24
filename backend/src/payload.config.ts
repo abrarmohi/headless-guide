@@ -1,8 +1,7 @@
 import { buildConfig } from 'payload/config'
 import path from 'path'
-import Categories from './collections/Categories'
 import Posts from './collections/Posts'
-import Tags from './collections/Tags'
+import Categories from './collections/Categories'
 import Users from './collections/Users'
 
 export default buildConfig({
@@ -10,7 +9,7 @@ export default buildConfig({
 	admin: {
 		user: Users.slug
 	},
-	collections: [Categories, Posts, Tags, Users],
+	collections: [Posts, Categories, Users],
 	typescript: {
 		outputFile: path.resolve(__dirname, 'payload-types.ts')
 	}

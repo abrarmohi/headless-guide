@@ -1,3 +1,4 @@
+// Types
 import { CollectionConfig } from 'payload/types'
 
 const Categories: CollectionConfig = {
