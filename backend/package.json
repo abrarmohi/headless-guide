@@ -15,8 +15,7 @@
 		"check": "tsc --noEmit",
 		"check:watch": "tsc --noEmit --watch",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. .",
-		"prepare": "cd .. && husky install backend/.husky"
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
 		"cross-env": "^7.0.3",
@@ -30,7 +29,6 @@
 		"@typescript-eslint/parser": "^5.30.6",
 		"eslint": "^8.19.0",
 		"eslint-config-prettier": "^8.5.0",
-		"husky": "^8.0.1",
 		"lint-staged": ">=10",
 		"nodemon": "^2.0.6",
 		"prettier": "^2.7.1",

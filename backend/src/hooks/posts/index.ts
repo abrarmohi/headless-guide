@@ -1,5 +1,5 @@
 import { FieldHook } from 'payload/types'
-import { isURLTaken, toURL } from '../../util'
+import { isURLTaken, toURL } from '../../utils'
 import { Collection } from '../../types'
 
 export const validateURL: FieldHook = async ({ value, req: { payload } }) => {
